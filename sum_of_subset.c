@@ -10,6 +10,10 @@ void print_sol()
 }
 int is_promising(int wsf,int tpl,int l)
 {
+	/*We do not need l<=n constraint because wsf > sum is not possible
+	 * and when array element ends then tpl=0 and wsf + tpl >= sum
+	 * and conditions gets falsified and process terminates on its own.
+	 */ 
 	if(wsf+w[l+1] <= sum && wsf+tpl >= sum)
 		return 0;
 	else
@@ -46,18 +50,19 @@ int main()
 	sum_of_subset(wsf,tpl,l);
 }
 /******************************Example******************************
+ 
  Enter number of Weights:5
  Enter Sum:23
  Enter Weights:
- 12
  5
  6
  11
+ 12
  17
- 1 1 1 0 0 
- 1 0 0 1 0 
- 0 0 1 0 1 
- 
+ 1 1 0 1 0 
+ 0 1 0 0 1 
+ 0 0 1 1 0 
+
  Enter number of Weights:4
  Enter Sum:12
  Enter Weights:

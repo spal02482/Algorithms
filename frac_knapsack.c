@@ -1,7 +1,3 @@
-/*
- Name:Pal Suraj
- Roll No.:7656
- */
 #include<stdio.h>
 #include<stdlib.h>
 typedef struct Sack

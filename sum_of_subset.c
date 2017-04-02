@@ -10,9 +10,9 @@ void print_sol()
 }
 int is_promising(int wsf,int tpl,int l)
 {
-	/*We do not need l<=n constraint because wsf > sum is not possible
-	 * and when array element ends then tpl=0 and wsf + tpl >= sum
-	 * and conditions gets falsified and process terminates on its own.
+	/*We do not need l < n constraint because wsf > sum is not possible
+	 * and when array element ends then tpl = 0 and wsf + tpl >= sum
+	 * conditions gets falsified and process terminates on its own.
 	 */ 
 	if(wsf+w[l+1] <= sum && wsf+tpl >= sum)
 		return 0;

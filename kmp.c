@@ -40,12 +40,14 @@ int kmp(char *t,char *p,int *lcs,int m,int n)
 	{
 		if(t[i]==p[j])
 		{
-			j++,i++;
-			if(j==n)
+			if(j==n-1)
 			{
 				count++;
-				j=lcs[j-1];
-			}	
+				i++;
+				j=lcs[j];
+			}
+			else	
+				j++,i++;
 		}
 		else
 		{

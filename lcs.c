@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #define max(a,b) a>b?a:b
 int lcs_length(int *s,int *p,int m,int n)
 {
